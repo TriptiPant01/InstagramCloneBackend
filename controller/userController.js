@@ -40,9 +40,9 @@ export const registerUser = async (req, res) => {
 };
 
 export const loginUser = async (req, res) => {
-  const { fullname, email, password } = req.body;
+  const { email, password } = req.body;
   try {
-    if (!fullname || !email || !password) {
+    if (!email || !password) {
       return res.status(422).json({
         err: "Please enter all the fields",
       });

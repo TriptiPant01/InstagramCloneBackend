@@ -4,7 +4,8 @@ import { tokenVerify } from "../middleware/verify.js";
 
 const route = express.Router();
 
-route.get("/", tokenVerify, getPost);
+// route.get("/", tokenVerify, getPost);
+route.get("/", getPost);
 route.post("/", tokenVerify, addpost);
 
 export default route;

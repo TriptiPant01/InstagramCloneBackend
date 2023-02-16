@@ -26,9 +26,7 @@ export const addpost = async (req, res) => {
       });
 
       await newPost.save();
-      return res.status(201).json({
-        message: "succesfully posted ",
-      });
+      return res.status(201).json(newPost);
     }
   } catch (err) {
     return res.status(500).json({ err: err.message });

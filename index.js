@@ -7,8 +7,8 @@ import postRoute from "./routes/postRoutes.js";
 import { tokenVerify } from "./middleware/verify.js";
 
 const app = Express();
-app.use(bodyParser.json());
 app.use(cors());
+app.use(bodyParser.json());
 
 const customMiddleware = (req, res, next) => {
   console.log("middleware");
